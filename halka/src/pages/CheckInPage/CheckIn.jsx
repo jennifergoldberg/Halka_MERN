@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import Response from '../../components/Responses';
+import Responses from '../../components/Responses';
 
 function CheckIn() {
+
+  // const response = ["Not true at all", "Rarely true", ]
 
   return (
     <div>
       <h1>CheckIn</h1>
-      <Response />
+      <Responses />
 
     </div>
 
