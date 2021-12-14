@@ -1,13 +1,13 @@
-import ButtonExampleButton from '../../components/Button'
-import QuestionCard from '../../components/QuestionCard'; 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SignUp from '../SignUpPage/SignUp';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <ButtonExampleButton />
-      <QuestionCard />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
