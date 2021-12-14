@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link } from "react-router-dom";
 import ButtonAnimated from '../../components/Button'
 
 function Landing() {
@@ -13,8 +14,12 @@ function Landing() {
         </div>
 
         <div className="landing__buttons">
-          <ButtonAnimated text="Login" icon="user circle"/>
-          <ButtonAnimated text="Signup" icon="user plus"/>
+          <Link to="/login">
+            <ButtonAnimated text="Login" icon="user circle"/>
+          </Link>
+          <Link to="/signup">
+            <ButtonAnimated text="Signup" icon="user plus"/>
+          </Link>
 
         </div>
 
