@@ -1,8 +1,19 @@
-/* .App {
-  margin: 0;
-} */
 
-.App-logo {
+:root {
+  --yellow: #FFC700;
+  --black: #101340;
+  --gray: #C4C4C4;
+  --lightyellow: #F2D775;
+}
+
+.App {
+  background-color: var(--yellow);
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

@@ -1,11 +1,15 @@
 import React from 'react';
 import {Link } from "react-router-dom";
 import ButtonAnimated from '../../components/Button'
+import './Landing.css'
 
 function Landing() {
+  
+  // let intViewportWidth = window.innerWidth;
+
   return (
     <div className="landing">
-      <div className="landing__desktop">
+      <div className="landing__mobile">
         <img src="assets/Halka.png" alt="logo" />
         <h4>mental health support for long haulers</h4>
 
@@ -24,7 +28,7 @@ function Landing() {
         </div>
 
       </div>
-      <div className="landing__mobile">
+      <div className="landing__desktop">
 
       </div>
     </div>

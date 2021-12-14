@@ -3,9 +3,11 @@ import { Card } from 'semantic-ui-react'
 
 const Response = () => (
   <Card.Group>
-    <Card fluid color='red' header='Option 1' />
-    <Card fluid color='orange' header='Option 2' />
-    <Card fluid color='yellow' header='Option 3' />
+    <Card fluid color='gray' header='Not true at all'/>
+    <Card fluid color='gray' header='Rarely true' />
+    <Card fluid color='gray' header='Sometimes true' />
+    <Card fluid color='gray' header='Often true' />
+    <Card fluid color='gray' header='True nearly all the time' />
   </Card.Group>
 )
 
