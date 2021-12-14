@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
 import {useNavigate, Link } from "react-router-dom";
-import './SignUp.css'
+import './Login.css'
 
-function SignUp() {
+function Login() {
   const [state, setState] = useState({
     username: "",
     email: "",
     password: "",
-    passwordConf: ""
   });
 
   function handleChange(e) {
@@ -35,16 +34,12 @@ function SignUp() {
   }
 
   return (
-    <div id='signup'>
-      <h2 className='signup__header'>Create your account</h2>
-      <Form className='signup__form' onSubmit={handleSubmit}>
+    <div id='login'>
+      <h2 className='login__header'>Create your account</h2>
+      <Form className='login__form' onSubmit={handleSubmit}>
         <Form.Field>
           <label>Username</label>
           <input type='text' name="username" placeholder='Username' value={state.username}onChange={handleChange} required />
-        </Form.Field>
-        <Form.Field>
-          <label>Email</label>
-          <input type='email' name="email" placeholder='Email' value={state.email} onChange={handleChange} />
         </Form.Field>
         <Form.Field>
           <label>Password</label>
@@ -53,10 +48,10 @@ function SignUp() {
         <Button type='submit'>Submit</Button>
       </Form>
       <section>
-          Already have an account? <Link to="/login">Login</Link>
+          New to us? <Link to="/signup">Sign Up</Link>
       </section>
     </div>
   )
 }
 
-export default SignUp;
+export default Login;
