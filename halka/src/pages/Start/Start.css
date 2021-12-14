@@ -1,7 +1,10 @@
-.start__hero {
-  background: url("assets/start-hero.jpg");
-  height: 30%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#start__hero {
+  height: 30vh;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100vw;
+}
+
+#start-hero img {
+  width: 100vw;
 }
