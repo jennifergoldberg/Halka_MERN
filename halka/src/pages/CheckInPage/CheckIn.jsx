@@ -3,13 +3,15 @@ import Responses from '../../components/Responses';
 
 function CheckIn() {
 
-  // const response = ["Not true at all", "Rarely true", ]
+  const [responseCount, setResponseCount] = useState(0)
+
+
 
   return (
     <div>
       <h1>CheckIn</h1>
-      <Responses />
-
+      <Responses onClick={() => setResponseCount(responseCount + 1)}/>
+      {console.log(responseCount)}
     </div>
 
   )
