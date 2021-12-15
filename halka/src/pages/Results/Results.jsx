@@ -73,7 +73,7 @@ const resultsGroup3 = [
   {
     header: 'Move',
     image: '/assets/activity-move.jpg',
-    description: "Whether you drive an small inner-city delivery truck or a huge semi-trailer up and down the length of Australia, most drivers have something in common – poor health.",
+    description: "Whether you drive an small inner-city delivery truck or a huge semi-trailer up and down the length of Australia, most drivers have something in common - poor health.",
     link: 'https://exerciseright.com.au/exercise-tips-truck-drivers/'
   },
   {
@@ -104,31 +104,29 @@ const resultsGroup3 = [
 
 
 function Results(props) {
-  const randomResult = (array) => {
-    return array[Math.floor(Math.random() * array.length)]
-  }
-  const calculateResults = (props) => {
+  let arrayFromValue = null;
+  let randomIndex = 1;
+
+  const calculateResults = () => {
     if (props.value === 1 || props.value === 2) {
-      const randomResults1 = randomResult(resultsGroup1)
-      return randomResults1
-    } else if (props.value === 3 || props.value === 4) {
-      const randomResults2 = randomResult(resultsGroup2)
-      return randomResults2
-    } else {
-      const randomResults3 = randomResult(resultsGroup3)
-      return randomResults3
+      arrayFromValue = resultsGroup1;
+      randomIndex = (Math.floor(Math.random() * resultsGroup1.length))
+    }
+    if (props.value === 3 || props.value === 4) {
+      arrayFromValue = resultsGroup2;
+      randomIndex = (Math.floor(Math.random() * resultsGroup2.length))
+    }
+    if (props.value === 5) {
+      arrayFromValue = resultsGroup3;
+      randomIndex = (Math.floor(Math.random() * resultsGroup3.length))
     }
   }
+  
+  calculateResults();
 
   console.log('this is your average value', props.value)
-  // function Results(props) {
-  // const calculateResults = (props) => {
-  //   if (props.value === 1 || props.value === 2) {
-  //     const randomResults1 = resultsGroup1[Math.floor(Math.random() * resultsGroup1.length)]
-  //   }
-  // }
-
-  const randomResourceNum = Math.floor(Math.random() * 2);
+  console.log('This is the array from Value', arrayFromValue);
+  console.log('This is the random index', randomIndex);
 
   return(
     <div id="results">
@@ -137,7 +135,7 @@ function Results(props) {
       </div>
 
       <div className="results__resources">
-        <ResultCard header={resultsGroup2[randomResourceNum].header} image={resultsGroup2[randomResourceNum].image} description={resultsGroup2[randomResourceNum].description} link={resultsGroup2[randomResourceNum].link} />
+        <ResultCard header={arrayFromValue[randomIndex].header} image={arrayFromValue[randomIndex].image} description={arrayFromValue[randomIndex].description} link={arrayFromValue[randomIndex].link} />
       </div>
 
       <div className='results__start-over'>
