@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
 /* Font Name: Bebas Neue (Bold), Baloo Bhaijaan 2 (sans serif) */
 
-
 :root {
-  --yellow: #FFC700;
+  --yellow: #ffc700;
   --black: #101340;
-  --gray: #C4C4C4;
-  --lightyellow: #F2D775;
+  --gray: #c4c4c4;
+  --lightyellow: #f2d775;
 }
 
 .App {
@@ -17,7 +16,7 @@
   margin: 0px;
   padding: 0px;
   height: 100vh;
-  font-family: 'Roboto' !important;
+  font-family: "Roboto" !important;
 }
 
 /* .App-logo {
