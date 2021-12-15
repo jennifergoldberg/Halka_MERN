@@ -4,7 +4,8 @@ import './Start.css'
 function Start() {
   return(
     <div id='start'>
-      <div className="start__hero">
+      <div id="start__hero">
+        <img src="assets/start-hero.jpg" alt="truck"/>
       </div>
 
       <div className="start__header">
