@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 import {useNavigate, Link } from "react-router-dom";
+import LandingFrame from '../../components/LandingFrame';
 import './SignUp.css'
 
 function SignUp() {
@@ -34,7 +35,7 @@ function SignUp() {
     // }
   }
 
-  return (
+  const SignUpForm = (
     <div id='signup'>
       <h2 className='signup__header'>Create your account</h2>
       <Form className='signup__form' onSubmit={handleSubmit}>
@@ -56,6 +57,10 @@ function SignUp() {
           Already have an account? <Link to="/login">Login</Link>
       </section>
     </div>
+  )
+
+  return (
+    <LandingFrame {...SignUpForm} />
   )
 }
 
