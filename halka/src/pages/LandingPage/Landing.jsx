@@ -2,7 +2,7 @@ import React from 'react';
 import {Link } from "react-router-dom";
 import ButtonAnimated from '../../components/Button'
 import LandingFrame from '../../components/LandingFrame';
-import './Landing.css'
+// import './Landing.css'
 
 function Landing() {
   
