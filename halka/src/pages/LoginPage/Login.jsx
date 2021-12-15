@@ -50,7 +50,9 @@ function Login() {
             name="password" 
             placeholder='Password' zzvalue={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
           </Form.Field>
-          <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+          <Link to="/start">
+            <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+          </Link>
         </Form>
         <section style={{ fontSize: '18px', marginTop: '10px' }}>
           New to us? <Link to="/signup">Sign Up</Link>
