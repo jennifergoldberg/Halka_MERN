@@ -5,12 +5,12 @@ import QuestionHeader from '../../components/QuestionHeader';
 import CheckInFooter from '../../components/CheckInFooter';
 import Questions from '../../components/Questions';
 
-function CheckIn() {
+const responseArray = [];
 
-  const [responseCount, setResponseCount] = useState(0)
+function CheckIn() {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [currentCheckInQuestion, setCurrentCheckInQuestion] = useState(0)
-  const valueArray = [];
+  const [selectedResponse, setSelectedResponse] = useState(null);
 
   const handleQuestionCountUp = (props) => {
       setCurrentQuestion((prevState) => prevState + 1)
@@ -22,14 +22,29 @@ function CheckIn() {
     setCurrentCheckInQuestion((prevState) => prevState - 1)
   }
 
-  
+  const handleResponseClick = (responseValue) => {
+    setSelectedResponse(responseValue);
+    console.log('Clicked response val', responseValue);
+  }
+
+  const handleSaveResponse = () => {
+    responseArray.push(selectedResponse);
+    setSelectedResponse(null);
+    console.log('Response array', responseArray)
+  }
+
+  const handleSubmit = () => {
+    const convertedArray = responseArray.map((element) => +(element));
+    const avgValue = (convertedArray.reduce((a,b) => a + b)/5);
+    console.log(Math.floor(avgValue));
+  }
 
   return (
   <Card style={{margin:"auto"}}>
-    <QuestionHeader currentQuestion = {currentQuestion} nextQuestion = {handleQuestionCountUp}/>
-    <Questions currentCheckInQuestion = {currentCheckInQuestion}/>
-    <Responses />
-    <CheckInFooter currentQuestion = {currentQuestion}incrementQuestionCount = {handleQuestionCountUp} decrementQuestionCount = {handleQuestionCountDown}/>
+    <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
+    <Questions currentCheckInQuestion={currentCheckInQuestion}/>
+    <Responses handleResponseClick={handleResponseClick} />
+    <CheckInFooter currentQuestion={currentQuestion}incrementQuestionCount={handleQuestionCountUp} decrementQuestionCount={handleQuestionCountDown} handleSaveResponse={handleSaveResponse} responseSelected={selectedResponse} handleSubmit={handleSubmit} />
   </Card>
   )
 }
