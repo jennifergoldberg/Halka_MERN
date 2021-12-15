@@ -10,21 +10,21 @@ const CheckInFooter = (props) => {
   // }
 
   return(
-    <div>
+    <div style={{textAlign:"right", margin:"10px", marginBottom:"20px"}}>
       {/* {props.currentQuestion === 1 ? <></> : <Button icon onClick={props.decrementQuestionCount}>
         <Icon name='chevron circle left'/>
       </Button>} */}
 
       { props.currentQuestion === 5 ? 
-        <Link to={'/results'}><Button 
-          style={{backgroundColor:"#101340", color:"white"}}
+        <Link to={'/results'}><Button size='large'
+          style={{backgroundColor:"#101340", color:"white", marginRight:"85px", marginTop:"10px", marginBottom:"20px"}}
           type='submit'
           className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.handleSaveResponse();
             props.handleSubmit();
           }} >Submit</Button></Link>
-      : <Button 
+      : <Button size='large' style={{marginTop:"10px", marginBottom:"20px", marginRight:"10px"}}
           icon className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.incrementQuestionCount(); 
