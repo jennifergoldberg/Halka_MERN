@@ -3,7 +3,7 @@ import { Button } from 'semantic-ui-react'
 
 const Response = (props) => (
   <div>
-    <Button onHover={{color:"#F2D775"}} content={props.text} basic />
+    <Button style={{width:"200px", marginBottom:"20px"}} onHover={{color:"#F2D775"}} content={props.content} value={props.value} basic />
   </div>
 )
 
