@@ -22,13 +22,9 @@ function CheckIn() {
     setCurrentCheckInQuestion((prevState) => prevState - 1)
   }
 
+  
+
   return (
-    // <div>
-    //   <h1>CheckIn</h1>
-    //   <Responses 
-    //     // onResponseClick={handleResponseClick()}
-    //   />
-    // </div>
   <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion = {currentQuestion} nextQuestion = {handleQuestionCountUp}/>
     <Questions currentCheckInQuestion = {currentCheckInQuestion}/>
