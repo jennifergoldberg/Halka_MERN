@@ -22,8 +22,16 @@ function CheckIn() {
     setCurrentCheckInQuestion((prevState) => prevState - 1)
   }
 
-  
+  const handleResultsClick = (props) => {
+    
+  }
 
+  const handleSubmit = (array) => {
+    const avgValue = array => array.reduce((a,b) => a + b, 0) / array.length 
+    return Math.floor(avgValue);
+  }
+
+  
   return (
   <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion = {currentQuestion} nextQuestion = {handleQuestionCountUp}/>
