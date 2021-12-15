@@ -1,0 +1,9 @@
+.results__header,
+.results__start-over {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.results__header {
+  padding: 0 20px;
+}

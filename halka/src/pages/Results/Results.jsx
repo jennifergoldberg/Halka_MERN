@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ResultCard from '../../components/ResultCard';
 import ButtonAnimated from '../../components/Button';
+import Nav from '../../components/Nav';
+import './Results.css'
 
 const resultsGroup1 = [
   {
@@ -108,15 +110,15 @@ function Results(props) {
   let randomIndex = 1;
 
   const calculateResults = () => {
-    if (props.value === 1 || props.value === 2) {
+    if (props.value === 4 || props.value === 5) {
       arrayFromValue = resultsGroup1;
       randomIndex = (Math.floor(Math.random() * resultsGroup1.length))
     }
-    if (props.value === 3 || props.value === 4) {
+    if (props.value === 2 || props.value === 3) {
       arrayFromValue = resultsGroup2;
       randomIndex = (Math.floor(Math.random() * resultsGroup2.length))
     }
-    if (props.value === 5) {
+    if (props.value === 1) {
       arrayFromValue = resultsGroup3;
       randomIndex = (Math.floor(Math.random() * resultsGroup3.length))
     }
@@ -124,24 +126,27 @@ function Results(props) {
   
   calculateResults();
 
-  console.log('this is your average value', props.value)
+  console.log('This is your average value', props.value)
   console.log('This is the array from Value', arrayFromValue);
   console.log('This is the random index', randomIndex);
 
   return(
-    <div id="results">
-      <div className="results__header">
-        <h1>Results</h1>
-      </div>
+    <>
+      <Nav />
+      <div id="results">
+        <div className="results__header">
+          <h1>Here is one thing you can focus on today based on how you're feeling.</h1>
+        </div>
 
-      <div className="results__resources">
-        <ResultCard header={arrayFromValue[randomIndex].header} image={arrayFromValue[randomIndex].image} description={arrayFromValue[randomIndex].description} link={arrayFromValue[randomIndex].link} />
-      </div>
+        <div className="results__resources">
+          <ResultCard header={arrayFromValue[randomIndex].header} image={arrayFromValue[randomIndex].image} description={arrayFromValue[randomIndex].description} link={arrayFromValue[randomIndex].link} />
+        </div>
 
-      <div className='results__start-over'>
-        <Link to={'/start'}><ButtonAnimated text='Start Over' icon='refresh' /></Link>
+        <div className='results__start-over'>
+          <Link to={'/start'}><ButtonAnimated text='Start Over' icon='refresh' /></Link>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

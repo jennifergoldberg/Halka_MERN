@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import userService from "../../utils/userService";
 import { Button, Form } from 'semantic-ui-react'
 import { useNavigate, Link } from "react-router-dom";
 import LandingFrame from '../../components/LandingFrame';
@@ -7,7 +8,6 @@ import ButtonAnimated from '../../components/Button';
 
 function Login() {
   const [state, setState] = useState({
-    username: "",
     email: "",
     password: "",
   });
@@ -43,7 +43,7 @@ function Login() {
         <Form className='login__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px', fontFamily: 'Roboto' }}>
           <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.15em', marginBottom: '30px', marginTop: '20px' }}>Log In</h2>
           <Form.Field>
-            <input type='text' name="username" placeholder='Username' value={state.username} onChange={handleChange} required style={{ textAlign: 'center'}} />
+            <input type='email' name="email" placeholder='Email' value={state.email} onChange={handleChange} required style={{ textAlign: 'center'}} />
           </Form.Field>
           <Form.Field >
             <input 
