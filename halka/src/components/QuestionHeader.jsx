@@ -3,7 +3,7 @@ import { Header } from 'semantic-ui-react'
 
 const QuestionHeader = (props) => (
   <div>
-    <Header size='small'>Question {props.question}/5</Header>
+    <Header size='small'>Question {props.currentQuestion}/5</Header>
   </div>
 )
 

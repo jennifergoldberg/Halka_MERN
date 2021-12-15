@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 import Responses from '../../components/Responses';
+import QuestionHeader from '../../components/QuestionHeader';
 
 function CheckIn() {
 
   const [responseCount, setResponseCount] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(1)
   const valueArray = [];
 
   // handleResponseClick = (value) => {
@@ -21,6 +23,7 @@ function CheckIn() {
     //   />
     // </div>
   <Card style={{margin:"auto"}}>
+    <QuestionHeader currentQuestion = {currentQuestion}/>
     <Responses />
   </Card>
   )
