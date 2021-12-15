@@ -11,13 +11,14 @@ export default class Nav extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu style={{color:'#101340', borderRadius:"0px"}}>
-        <img src="/assets/Halka.png" alt="logo" style={{height:"15px", margin:"11px"}}/>
+      <Menu style={{color:'#101340', borderRadius:"0px", margin:"0px", display:"flex"}}>
+        <img src="/assets/Halka.png" alt="logo" style={{height:"15px", margin:"12px"}}/>
         <Link to='/start'>
           <Menu.Item
             name='home'
             active={activeItem === 'home'}
             onClick={this.handleItemClick}
+            style={{justifyContent:"space-between"}}
           /> 
         </Link>
         {/* <Menu.Item
@@ -30,6 +31,7 @@ export default class Nav extends Component {
             name='logout'
             active={activeItem === 'logout'}
             onClick={this.handleItemClick}
+            style={{justifyContent:"space-between"}}
           />
         </Link>
       </Menu>
