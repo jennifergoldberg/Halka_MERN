@@ -37,25 +37,23 @@ function SignUp() {
 
   return (
     <>
+   
+    <div id='signup' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}} > 
     <LandingFrame />
-    <div id='signup'>
-      <h2 className='signup__header'>Create your account</h2>
-      <Form className='signup__form' onSubmit={handleSubmit}>
-        <Form.Field>
-          <label>Username</label>
-          <input type='text' name="username" placeholder='Username' value={state.username}onChange={handleChange} required />
+      <h2 className='signup__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '2em', marginBottom: '50px', marginTop: '20px' }}>Create your account</h2>
+      <Form className='signup__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px' }} >
+        <Form.Field> 
+          <input type='text' name="username" placeholder='Username' value={state.username}onChange={handleChange} required style={{ textAlign: 'center'}} />
         </Form.Field>
         <Form.Field>
-          <label>Email</label>
-          <input type='email' name="email" placeholder='Email' value={state.email} onChange={handleChange} />
+          <input type='email' name="email" placeholder='Email' value={state.email} onChange={handleChange} style={{ textAlign: 'center'}} />
         </Form.Field>
         <Form.Field>
-          <label>Password</label>
-          <input type='password' name="password" placeholder='Password' value={state.password} onChange={handleChange} required />
+          <input type='password' name="password" placeholder='Password' value={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
         </Form.Field>
-        <Button type='submit'>Submit</Button>
+        <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
       </Form>
-      <section>
+      <section  style={{ fontSize: '18px', marginTop: '10px' }}>
           Already have an account? <Link to="/login">Login</Link>
       </section>
     </div>

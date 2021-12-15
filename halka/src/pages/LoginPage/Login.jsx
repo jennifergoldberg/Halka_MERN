@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'semantic-ui-react'
-import {useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import LandingFrame from '../../components/LandingFrame';
 import './Login.css'
 
@@ -35,26 +35,28 @@ function Login() {
   }
 
   return (
-    <>
-    <LandingFrame />
-    <div id='login'>
-      <h2 className='login__header'>Create your account</h2>
-      <Form className='login__form' onSubmit={handleSubmit}>
-        <Form.Field>
-          <label>Username</label>
-          <input type='text' name="username" placeholder='Username' value={state.username}onChange={handleChange} required />
-        </Form.Field>
-        <Form.Field>
-          <label>Password</label>
-          <input type='password' name="password" placeholder='Password' value={state.password} onChange={handleChange} required />
-        </Form.Field>
-        <Button type='submit'>Submit</Button>
-      </Form>
-      <section>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',  textAlign: 'center'}} >
+      <LandingFrame />
+      <div id='login'>
+        
+        <Form className='login__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px', fontFamily: 'Roboto' }}>
+          <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '2em', marginBottom: '50px', marginTop: '20px' }}>Log In</h2>
+          <Form.Field>
+            <input type='text' name="username" placeholder='Username' value={state.username} onChange={handleChange} required style={{ textAlign: 'center'}} />
+          </Form.Field>
+          <Form.Field >
+            <input 
+            type='password' 
+            name="password" 
+            placeholder='Password' zzvalue={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
+          </Form.Field>
+          <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+        </Form>
+        <section style={{ fontSize: '18px', marginTop: '10px' }}>
           New to us? <Link to="/signup">Sign Up</Link>
-      </section>
+        </section>
+      </div>
     </div>
-    </>
   )
 }
 
