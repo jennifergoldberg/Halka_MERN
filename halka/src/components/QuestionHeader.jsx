@@ -7,4 +7,4 @@ const QuestionHeader = (props) => (
   </div>
 )
 
-export default QuestionHeader
+export default QuestionHeader;

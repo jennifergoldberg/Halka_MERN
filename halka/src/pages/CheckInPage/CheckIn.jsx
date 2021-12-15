@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 import Responses from '../../components/Responses';
 import QuestionHeader from '../../components/QuestionHeader';
+import CheckInFooter from '../../components/CheckInFooter';
 
 function CheckIn() {
 
@@ -25,6 +26,7 @@ function CheckIn() {
   <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion = {currentQuestion}/>
     <Responses />
+    <CheckInFooter />
   </Card>
   )
 }
