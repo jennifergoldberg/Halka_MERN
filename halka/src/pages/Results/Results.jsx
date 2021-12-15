@@ -8,19 +8,19 @@ import './Results.css'
 const resultsGroup1 = [
   {
     header: 'Hotline',
-    image: '/assets/start-hero.jpg',
+    image: '/assets/hotline.png',
     description: "In America, 1.5% of the population suffers from depression. In comparison, 13.6% of truck drivers suffer from some level of depression, a drastic difference from the rest of the population.",
     link: 'https://www.healthytruck.org/depression-in-truckers/'
   },
   {
     header: 'Hotline',
-    image: '/assets/start-hero.jpg',
+    image: '/assets/hotline.png',
     description: "The National Suicide Prevention Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week in the United States.",
     link: 'https://suicidepreventionlifeline.org/'
   }, 
   {
     header: 'Hotline',
-    image: '/assets/start-hero.jpg',
+    image: '/assets/hotline.png',
     description: "The National Suicide Prevention Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week in the United States.",
     link: 'https://suicidepreventionlifeline.org/'
   }
