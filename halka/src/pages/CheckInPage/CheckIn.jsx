@@ -46,7 +46,7 @@ function CheckIn(props) {
     <div id="checkin">
       <Nav />
       {/* <img src="/assets/login-signup.jpg" alt="open road" style={{minWidth:"100vw", maxHeight:"100vh", zIndex:"2000"}}/> */}
-      <Card id="checkin__card" style={{margin:"auto", marginTop:"20px", zIndex:"10"}}>
+      <Card id="checkin__card" centered raised style={{margin:"auto", marginTop:"50px"}}>
         <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
         <Questions currentCheckInQuestion={currentCheckInQuestion}/>
         <Responses handleResponseClick={handleResponseClick} />

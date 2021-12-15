@@ -16,15 +16,15 @@ const CheckInFooter = (props) => {
       </Button>} */}
 
       { props.currentQuestion === 5 ? 
-        <Link to={'/results'}><Button 
-          style={{backgroundColor:"#101340", color:"white", marginRight:"90px"}}
+        <Link to={'/results'}><Button size='large'
+          style={{backgroundColor:"#101340", color:"white", marginRight:"85px", marginTop:"10px", marginBottom:"20px"}}
           type='submit'
           className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.handleSaveResponse();
             props.handleSubmit();
           }} >Submit</Button></Link>
-      : <Button 
+      : <Button size='large' style={{marginTop:"10px", marginBottom:"20px", marginRight:"10px"}}
           icon className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.incrementQuestionCount(); 
