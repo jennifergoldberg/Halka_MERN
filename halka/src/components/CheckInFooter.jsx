@@ -3,12 +3,16 @@ import { Button, Icon } from 'semantic-ui-react'
 
 const CheckInFooter = (props) => (
   <div>
-    <Button icon>
-      <Icon name='chevron circle left' />
-    </Button>
-    <Button icon>
-      <Icon name='chevron circle right' />
-    </Button>
+    {props.currentQuestion === 1 ? <></> : <Button icon>
+      <Icon name='chevron circle left' onClick={props.decrementQuestionCount}/>
+    </Button>}
+
+    { props.currentQuestion === 5 ? 
+      <Button style={{backgroundColor:"#101340", color:"white"}} type='submit'>Submit</Button>
+    : <Button icon>
+      <Icon name='chevron circle right' onClick={props.incrementQuestionCount}/>
+    </Button> 
+    }
   </div>
 )
 

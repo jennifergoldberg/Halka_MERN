@@ -10,11 +10,13 @@ function CheckIn() {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const valueArray = [];
 
-  // handleResponseClick = (value) => {
-  //   valueArray.push(value)
-  //   setResponseCount(responseCount + )
-  // }
-  
+  const handleQuestionCountUp = (props) => {
+      setCurrentQuestion((prevState) => prevState + 1)
+  }
+
+  const handleQuestionCountDown = (props) => {
+    setCurrentQuestion((prevState) => prevState - 1)
+  }
 
   return (
     // <div>
@@ -26,7 +28,7 @@ function CheckIn() {
   <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion = {currentQuestion}/>
     <Responses />
-    <CheckInFooter />
+    <CheckInFooter currentQuestion = {currentQuestion}incrementQuestionCount = {handleQuestionCountUp} decrementQuestionCount = {handleQuestionCountDown}/>
   </Card>
   )
 }
