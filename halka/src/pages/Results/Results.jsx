@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ResultCard from '../../components/ResultCard';
+import ButtonAnimated from '../../components/Button';
 
 const resultsGroup1 = [
   {
@@ -135,8 +137,11 @@ function Results(props) {
       </div>
 
       <div className="results__resources">
-        {/* <ResultCardHotline /> */}
         <ResultCard header={resultsGroup2[randomResourceNum].header} image={resultsGroup2[randomResourceNum].image} description={resultsGroup2[randomResourceNum].description} link={resultsGroup2[randomResourceNum].link} />
+      </div>
+
+      <div className='results__start-over'>
+        <Link to={'/start'}><ButtonAnimated text='Start Over' icon='refresh' /></Link>
       </div>
     </div>
   )
