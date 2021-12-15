@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import ButtonAnimated from '../../components/Button';
 import { Header } from 'semantic-ui-react';
 import './Start.css'
+import Nav from '../../components/Nav'
 
 function Start() {
   return(
     <div id='start'>
+      <Nav />
       <div id="start__hero">
         <img src="assets/start-hero.jpg" alt="truck"/>
       </div>
