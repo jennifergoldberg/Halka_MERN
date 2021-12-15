@@ -41,7 +41,7 @@ function Login() {
       <div id='login'>
         
         <Form className='login__form' onSubmit={handleSubmit} size="medium" style={{ textAlign: 'center', maxWidth: '500px', fontFamily: 'Roboto' }}>
-          <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.15em', marginBottom: '30px', marginTop: '20px' }}>Log In</h2>
+          <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.5em', marginBottom: '30px', marginTop: '20px' }}>Log In</h2>
           <Form.Field>
             <input type='email' name="email" placeholder='Email' value={state.email} onChange={handleChange} required style={{ textAlign: 'center'}} />
           </Form.Field>
