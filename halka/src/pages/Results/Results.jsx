@@ -68,19 +68,19 @@ const resultsGroup2 = [
 const resultsGroup3 = [
   {
     header: 'Move',
-    image: '/assets/activity-move.jpg',
+    image: '/assets/movement.jpg',
     description: "Overcoming challenges to a healthy trucker lifestyle on the road-----For drivers new to the industry, the over-the-road lifestyle may generate concerns regarding nutrition, sedentary hours, weight management and the development of health conditions over time.",
     link: 'https://www.worktruckonline.com/10152551/6-tips-to-reduce-work-truck-driver-stress'
   },
   {
     header: 'Move',
-    image: '/assets/activity-move.jpg',
+    image: '/assets/movement.jpg',
     description: "Whether you drive an small inner-city delivery truck or a huge semi-trailer up and down the length of Australia, most drivers have something in common - poor health.",
     link: 'https://exerciseright.com.au/exercise-tips-truck-drivers/'
   },
   {
     header: 'Move',
-    image: '/assets/activity-move.jpg',
+    image: '/assets/movement.jpg',
     description: "Being a commercial truck driver can be a rewarding occupation, but it can also be one that causes some unhealthy living habits. The hours of inactivity are a given, but a poor diet can cause many truckers to develop a wide variety of health issues. As a result, truckers run the risk of developing health problems if they do not find ways to be more active and healthy on the road.",
     link: 'https://www.healthline.com/health/breathing-exercise#takeaway'
   },
@@ -110,15 +110,15 @@ function Results(props) {
   let randomIndex = 1;
 
   const calculateResults = () => {
-    if (props.value === 4 || props.value === 5) {
+    if (props.value === 1 || props.value === 2) {
       arrayFromValue = resultsGroup1;
       randomIndex = (Math.floor(Math.random() * resultsGroup1.length))
     }
-    if (props.value === 2 || props.value === 3) {
+    if (props.value === 3 || props.value === 4) {
       arrayFromValue = resultsGroup2;
       randomIndex = (Math.floor(Math.random() * resultsGroup2.length))
     }
-    if (props.value === 1) {
+    if (props.value === 5) {
       arrayFromValue = resultsGroup3;
       randomIndex = (Math.floor(Math.random() * resultsGroup3.length))
     }
