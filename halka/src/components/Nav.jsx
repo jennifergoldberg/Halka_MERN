@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-// import NavHotlines from './NavHotlines';
+import NavHotlines from './NavHotlines';
 
 export default class Nav extends Component {
   state = { activeItem: 'home' }
@@ -36,7 +36,7 @@ export default class Nav extends Component {
           />
         </Link>
 
-        {/* <NavHotlines /> */}
+        <NavHotlines />
       </Menu>
     )
   }
