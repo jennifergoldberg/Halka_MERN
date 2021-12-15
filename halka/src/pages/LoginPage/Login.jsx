@@ -3,6 +3,7 @@ import { Button, Form } from 'semantic-ui-react'
 import { useNavigate, Link } from "react-router-dom";
 import LandingFrame from '../../components/LandingFrame';
 import './Login.css'
+import ButtonAnimated from '../../components/Button';
 
 function Login() {
   const [state, setState] = useState({
@@ -40,7 +41,7 @@ function Login() {
       <div id='login'>
         
         <Form className='login__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px', fontFamily: 'Roboto' }}>
-          <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '2em', marginBottom: '50px', marginTop: '20px' }}>Log In</h2>
+          <h2 className='login__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.15em', marginBottom: '30px', marginTop: '20px' }}>Log In</h2>
           <Form.Field>
             <input type='text' name="username" placeholder='Username' value={state.username} onChange={handleChange} required style={{ textAlign: 'center'}} />
           </Form.Field>
@@ -51,10 +52,10 @@ function Login() {
             placeholder='Password' zzvalue={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
           </Form.Field>
           <Link to="/start">
-            <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+            <ButtonAnimated type='submit' style={{ minWidth: '500px' }} text="Submit" icon="arrow right"></ButtonAnimated>
           </Link>
         </Form>
-        <section style={{ fontSize: '18px', marginTop: '10px' }}>
+        <section style={{ fontSize: '18px', marginTop: '30px' }}>
           New to us? <Link to="/signup">Sign Up</Link>
         </section>
       </div>

@@ -22,6 +22,7 @@
   font-size: 1.2rem;
   margin: auto;
   margin-bottom: 20px;
+  max-width: 70vw;
 }
 
 .start__beginCheckin {

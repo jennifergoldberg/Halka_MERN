@@ -3,6 +3,7 @@ import { Button, Checkbox, Form } from 'semantic-ui-react'
 import {useNavigate, Link } from "react-router-dom";
 import LandingFrame from '../../components/LandingFrame';
 import './SignUp.css'
+import ButtonAnimated from '../../components/Button';
 
 function SignUp() {
   const [state, setState] = useState({
@@ -39,7 +40,7 @@ function SignUp() {
     <>
     <div id='signup' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}} > 
     <LandingFrame />
-      <h2 className='signup__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '2em', marginBottom: '50px', marginTop: '20px' }}>Create your account</h2>
+      <h2 className='signup__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.5em', marginBottom: '30px', marginTop: '20px' }}>Create your account</h2>
       <Form className='signup__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px' }} >
         <Form.Field> 
           <input type='text' name="username" placeholder='Username' value={state.username}onChange={handleChange} required style={{ textAlign: 'center'}} />
@@ -51,10 +52,10 @@ function SignUp() {
           <input type='password' name="password" placeholder='Password' value={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
         </Form.Field>
         <Link to="/start">
-          <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+          <ButtonAnimated type='submit' text="Submit" icon="arrow right" style={{ minWidth: '500px' }} ></ButtonAnimated>
         </Link>
       </Form>
-      <section  style={{ fontSize: '18px', marginTop: '10px' }}>
+      <section  style={{ fontSize: '18px', marginTop: '30px' }}>
           Already have an account? <Link to="/login">Login</Link>
       </section>
     </div>

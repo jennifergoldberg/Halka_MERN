@@ -9,7 +9,7 @@ function Landing() {
   // let intViewportWidth = window.innerWidth;
 
   return (
-    <div className="landing" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around' }}>
+    <div className="landing" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', maxWidth:"100vw", maxHeight:"100vh"}}>
       <LandingFrame />
       <div className="landing__buttons">
           <Link to="/login">
