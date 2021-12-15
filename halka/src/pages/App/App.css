@@ -15,7 +15,7 @@
   background-color: var(--yellow);
   margin: 0px;
   padding: 0px;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Roboto" !important;
 }
 

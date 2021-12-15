@@ -47,7 +47,7 @@ function SignUp(props) {
       <div id='signup' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
         <LandingFrame />
         <h2 className='signup__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '1.5em', marginBottom: '30px', marginTop: '20px' }}>Create your account</h2>
-        <Form className='signup__form' onSubmit={handleSubmit} size="huge" style={{ textAlign: 'center', minWidth: '500px' }} >
+        <Form className='signup__form' onSubmit={handleSubmit} size="medium" style={{ textAlign: 'center', minWidth:'500px'}} >
           <Form.Field>
             <input type='text' name="username" placeholder='Username' value={state.username} onChange={handleChange} required style={{ textAlign: 'center' }} />
           </Form.Field>
@@ -61,7 +61,7 @@ function SignUp(props) {
           <ButtonAnimated type='submit' text="Submit" icon="arrow right" style={{ minWidth: '500px' }} ></ButtonAnimated>
           </Link>
         </Form>
-        <section style={{ fontSize: '18px', marginTop: '30px' }}>
+        <section style={{ fontSize: '18px', marginTop: '30px', marginBottom:'50px'}}>
           Already have an account? <Link to="/login">Login</Link>
         </section>
       </div>
