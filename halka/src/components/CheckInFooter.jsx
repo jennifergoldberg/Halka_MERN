@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 
 const CheckInFooter = (props) => {
+
+
   return(
     <div>
       {/* {props.currentQuestion === 1 ? <></> : <Button icon onClick={props.decrementQuestionCount}>
@@ -11,14 +13,13 @@ const CheckInFooter = (props) => {
       { props.currentQuestion === 5 ? 
         <Button 
           style={{backgroundColor:"#101340", color:"white"}}
-          type='submit' 
-          className={props.selectedResponse ? '' : 'disabled'}
+          type='submit'
           onClick={() => {
             props.handleSaveResponse();
             props.handleSubmit();
           }} >Submit</Button>
       : <Button 
-          icon className={props.selectedResponse ? '' : 'disabled'}
+          icon className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.incrementQuestionCount(); 
             props.handleSaveResponse() 

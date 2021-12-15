@@ -29,6 +29,7 @@ function CheckIn() {
 
   const handleSaveResponse = () => {
     responseArray.push(selectedResponse);
+    setSelectedResponse(null);
     console.log('Response array', responseArray)
   }
 
@@ -43,7 +44,7 @@ function CheckIn() {
     <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
     <Questions currentCheckInQuestion={currentCheckInQuestion}/>
     <Responses handleResponseClick={handleResponseClick} />
-    <CheckInFooter currentQuestion={currentQuestion}incrementQuestionCount={handleQuestionCountUp} decrementQuestionCount={handleQuestionCountDown} handleSaveResponse={handleSaveResponse} selectedResponse={selectedResponse} handleSubmit={handleSubmit} />
+    <CheckInFooter currentQuestion={currentQuestion}incrementQuestionCount={handleQuestionCountUp} decrementQuestionCount={handleQuestionCountDown} handleSaveResponse={handleSaveResponse} responseSelected={selectedResponse} handleSubmit={handleSubmit} />
   </Card>
   )
 }
