@@ -3,7 +3,7 @@ import { Header, Button, Popup, Grid, Icon } from 'semantic-ui-react';
 
 function NavHotlines() {
   return(
-    <Popup trigger={<Button>Live Help</Button>} flowing hoverable wide style={{maxWidth: '320px'}} position='bottom center'>
+    <Popup trigger={<Button style={{border: 'none', background: 'transparent', paddingRight: '20px', paddingLeft: '0'}}>Live Help</Button>} flowing hoverable wide style={{maxWidth: '320px'}} position='bottom right'>
       <Grid centered>
         <Grid.Column textAlign='center'>
           <Header as='h4'>National Suicide Prevention Lifeline</Header>

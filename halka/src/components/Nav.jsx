@@ -14,6 +14,7 @@ export default class Nav extends Component {
     return (
       <Menu style={{color:'#101340', borderRadius:"0px", margin:"0px", display:"flex"}}>
         <img src="/assets/Halka.png" alt="logo" style={{height:"15px", margin:"12px"}}/>
+        
         <Link to='/start'>
           <Menu.Item
             name='home'
@@ -36,7 +37,8 @@ export default class Nav extends Component {
           />
         </Link>
 
-        <NavHotlines />
+        <Menu.Item position='right' /><NavHotlines position='right'  />
+        
       </Menu>
     )
   }
