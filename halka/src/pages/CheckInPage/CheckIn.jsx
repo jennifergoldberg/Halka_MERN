@@ -38,12 +38,6 @@ function CheckIn() {
     const avgValue = (convertedArray.reduce((a,b) => a + b)/5);
     console.log(Math.floor(avgValue));
   }
-
-  const handleSubmit = (array) => {
-    const avgValue = array => array.reduce((a,b) => a + b, 0) / array.length 
-    return Math.floor(avgValue);
-  }
-
   
   return (
   <Card style={{margin:"auto"}}>

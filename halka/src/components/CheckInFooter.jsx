@@ -14,6 +14,7 @@ const CheckInFooter = (props) => {
         <Button 
           style={{backgroundColor:"#101340", color:"white"}}
           type='submit'
+          className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.handleSaveResponse();
             props.handleSubmit();
