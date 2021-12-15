@@ -7,7 +7,7 @@ import Questions from '../../components/Questions';
 
 const responseArray = [];
 
-function CheckIn() {
+function CheckIn(props) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
   const [currentCheckInQuestion, setCurrentCheckInQuestion] = useState(0)
   const [selectedResponse, setSelectedResponse] = useState(null);
@@ -35,8 +35,9 @@ function CheckIn() {
 
   const handleSubmit = () => {
     const convertedArray = responseArray.map((element) => +(element));
-    const avgValue = (convertedArray.reduce((a,b) => a + b)/5);
-    console.log(Math.floor(avgValue));
+    const avgValue = Math.floor(convertedArray.reduce((a,b) => a + b)/5);
+    props.storeAvgResponseValue(avgValue);
+    console.log(avgValue)
   }
   
   return (

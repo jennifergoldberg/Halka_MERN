@@ -1,6 +1,5 @@
 import React from 'react';
 import ResultCard from '../../components/ResultCard';
-import ResultCardHotline from '../../components/ResultCardHotline';
 
 const resultsGroup1 = [
   {
@@ -119,7 +118,7 @@ function Results(props) {
     }
   }
 
-
+  console.log('this is your average value', props.value)
   // function Results(props) {
   // const calculateResults = (props) => {
   //   if (props.value === 1 || props.value === 2) {

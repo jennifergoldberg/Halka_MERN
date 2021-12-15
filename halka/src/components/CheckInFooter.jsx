@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
-import { Button, Icon } from 'semantic-ui-react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button, Icon } from 'semantic-ui-react';
 
 const CheckInFooter = (props) => {
-
+  // const routeChange = () => {
+  //   let history = useHistory();
+  //   let path = `/results`;
+  //   history.pushState(path)
+  // }
 
   return(
     <div>
@@ -11,14 +16,14 @@ const CheckInFooter = (props) => {
       </Button>} */}
 
       { props.currentQuestion === 5 ? 
-        <Button 
+        <Link to={'/results'}><Button 
           style={{backgroundColor:"#101340", color:"white"}}
           type='submit'
           className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
             props.handleSaveResponse();
             props.handleSubmit();
-          }} >Submit</Button>
+          }} >Submit</Button></Link>
       : <Button 
           icon className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {
