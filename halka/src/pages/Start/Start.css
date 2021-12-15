@@ -4,7 +4,7 @@
 
 #start__hero {
   height: 40%;
-  max-height: 500px;
+  max-height: 450px;
   width: 100%;
   overflow: hidden;
 }
@@ -15,13 +15,13 @@
 }
 
 .start__header {
-  margin: 40px 0 20px 0;
+  margin: 35px 0 15px 0;
 }
 
 .start__intro {
   font-size: 1.2rem;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   max-width: 70vw;
 }
 

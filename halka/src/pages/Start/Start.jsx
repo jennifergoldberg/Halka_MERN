@@ -21,7 +21,7 @@ function Start() {
         <p style={{fontWeight:"700"}}>Thanks for checking in!</p>
         <p>We know the holidays are a crazy time of year for truckers helping Santa do his magic. </p>
         <p>We want to give you a high five for taking the time to take care of yourself!</p>
-        <p style={{marginTop:"30px", fontWeight:"700", fontSize:"1.15em"}}>Ready to check in?</p>
+        <p style={{marginTop:"10px", fontWeight:"700", fontSize:"1.15em"}}>Ready to check in?</p>
       </div>
       
       <Link to={'/checkin'}><ButtonAnimated text='Begin' icon='play circle outline' /></Link>
