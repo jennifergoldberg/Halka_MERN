@@ -10,14 +10,14 @@ const CheckInFooter = (props) => {
   // }
 
   return(
-    <div>
+    <div style={{textAlign:"right", margin:"10px", marginBottom:"20px"}}>
       {/* {props.currentQuestion === 1 ? <></> : <Button icon onClick={props.decrementQuestionCount}>
         <Icon name='chevron circle left'/>
       </Button>} */}
 
       { props.currentQuestion === 5 ? 
         <Link to={'/results'}><Button 
-          style={{backgroundColor:"#101340", color:"white"}}
+          style={{backgroundColor:"#101340", color:"white", marginRight:"90px"}}
           type='submit'
           className={props.responseSelected ? '' : 'disabled'}
           onClick={() => {

@@ -7,7 +7,7 @@ function Questions(props) {
 
   return (
     <div>
-      <Header size='small'>Over the last month, how much do you agree with the following statement?</Header>
+      <Header size='small' style={{textAlign:"center", fontWeight:"400"}}>Over the last month, how much do you agree with the following statement?</Header>
       <Question content={checkInQuestions[props.currentCheckInQuestion]}/>
     </div>
   )

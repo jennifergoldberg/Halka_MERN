@@ -4,8 +4,9 @@ import Responses from '../../components/Responses';
 import QuestionHeader from '../../components/QuestionHeader';
 import CheckInFooter from '../../components/CheckInFooter';
 import Questions from '../../components/Questions';
+import Nav from '../../components/Nav'
 
-const responseArray = [];
+let responseArray = [];
 
 function CheckIn(props) {
   const [currentQuestion, setCurrentQuestion] = useState(1)
@@ -37,16 +38,21 @@ function CheckIn(props) {
     const convertedArray = responseArray.map((element) => +(element));
     const avgValue = Math.floor(convertedArray.reduce((a,b) => a + b)/5);
     props.storeAvgResponseValue(avgValue);
+    responseArray = [];
     console.log(avgValue)
   }
   
   return (
-  <Card style={{margin:"auto"}}>
-    <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
-    <Questions currentCheckInQuestion={currentCheckInQuestion}/>
-    <Responses handleResponseClick={handleResponseClick} />
-    <CheckInFooter currentQuestion={currentQuestion}incrementQuestionCount={handleQuestionCountUp} decrementQuestionCount={handleQuestionCountDown} handleSaveResponse={handleSaveResponse} responseSelected={selectedResponse} handleSubmit={handleSubmit} />
-  </Card>
+    <div id="checkin">
+      <Nav />
+      {/* <img src="/assets/login-signup.jpg" alt="open road" style={{minWidth:"100vw", maxHeight:"100vh", zIndex:"2000"}}/> */}
+      <Card id="checkin__card" style={{margin:"auto", marginTop:"20px", zIndex:"10"}}>
+        <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
+        <Questions currentCheckInQuestion={currentCheckInQuestion}/>
+        <Responses handleResponseClick={handleResponseClick} />
+        <CheckInFooter currentQuestion={currentQuestion}incrementQuestionCount={handleQuestionCountUp} decrementQuestionCount={handleQuestionCountDown} handleSaveResponse={handleSaveResponse} responseSelected={selectedResponse} handleSubmit={handleSubmit} />
+      </Card>
+    </div>
   )
 }
 
