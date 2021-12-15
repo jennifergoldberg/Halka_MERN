@@ -37,7 +37,6 @@ function SignUp() {
 
   return (
     <>
-   
     <div id='signup' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}} > 
     <LandingFrame />
       <h2 className='signup__header' style={{ fontFamily: 'Roboto', fontWeight: '500', fontSize: '2em', marginBottom: '50px', marginTop: '20px' }}>Create your account</h2>
@@ -51,7 +50,9 @@ function SignUp() {
         <Form.Field>
           <input type='password' name="password" placeholder='Password' value={state.password} onChange={handleChange} required style={{ textAlign: 'center'}} />
         </Form.Field>
-        <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+        <Link to="/start">
+          <Button type='submit' color="black" size="huge" style={{ minWidth: '500px' }} >Submit</Button>
+        </Link>
       </Form>
       <section  style={{ fontSize: '18px', marginTop: '10px' }}>
           Already have an account? <Link to="/login">Login</Link>

@@ -101,10 +101,29 @@ const resultsGroup3 = [
   },
 ]
 
+
 function Results(props) {
+  const randomResult = (array) => {
+    return array[Math.floor(Math.random() * array.length)]
+  }
+  const calculateResults = (props) => {
+    if (props.value === 1 || props.value === 2) {
+      const randomResults1 = randomResult(resultsGroup1)
+      return randomResults1
+    } else if (props.value === 3 || props.value === 4) {
+      const randomResults2 = randomResult(resultsGroup2)
+      return randomResults2
+    } else {
+      const randomResults3 = randomResult(resultsGroup3)
+      return randomResults3
+    }
+  }
+
+
+  // function Results(props) {
   // const calculateResults = (props) => {
   //   if (props.value === 1 || props.value === 2) {
-  //     const Math.random
+  //     const randomResults1 = resultsGroup1[Math.floor(Math.random() * resultsGroup1.length)]
   //   }
   // }
 

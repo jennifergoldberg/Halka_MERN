@@ -38,7 +38,7 @@ function CheckIn() {
     const avgValue = (convertedArray.reduce((a,b) => a + b)/5);
     console.log(Math.floor(avgValue));
   }
-
+  
   return (
   <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion={currentQuestion} nextQuestion={handleQuestionCountUp}/>
