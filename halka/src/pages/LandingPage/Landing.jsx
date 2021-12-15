@@ -7,8 +7,10 @@ import './Landing.css'
 function Landing() {
   
   // let intViewportWidth = window.innerWidth;
-  const LandingButtons = 
-  (
+
+  return (
+    <div className="landing">
+      <LandingFrame />
       <div className="landing__buttons">
           <Link to="/login">
             <ButtonAnimated text="Login" icon="user circle"/>
@@ -18,11 +20,6 @@ function Landing() {
           </Link>
 
       </div>
-  )
-
-  return (
-    <div className="landing">
-      <LandingFrame {...LandingButtons} />
       <div className="landing__mobile">
         
         
