@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-// import NavHotlines from './NavHotlines';
+import NavHotlines from './NavHotlines';
 
 export default class Nav extends Component {
   state = { activeItem: 'home' }
@@ -14,6 +14,7 @@ export default class Nav extends Component {
     return (
       <Menu style={{color:'#101340', borderRadius:"0px", margin:"0px", display:"flex"}}>
         <img src="/assets/Halka.png" alt="logo" style={{height:"15px", margin:"12px"}}/>
+        
         <Link to='/start'>
           <Menu.Item
             name='home'
@@ -36,7 +37,8 @@ export default class Nav extends Component {
           />
         </Link>
 
-        {/* <NavHotlines /> */}
+        <Menu.Item position='right' /><NavHotlines position='right'  />
+        
       </Menu>
     )
   }
