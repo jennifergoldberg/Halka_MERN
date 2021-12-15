@@ -1,14 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 
 const CheckInFooter = (props) => {
-  // {!props.selectedResponse && 'disabled'}
-
   return(
     <div>
-      {props.currentQuestion === 1 ? <></> : <Button icon>
-        <Icon name='chevron circle left' onClick={props.decrementQuestionCount}/>
-      </Button>}
+      {/* {props.currentQuestion === 1 ? <></> : <Button icon onClick={props.decrementQuestionCount}>
+        <Icon name='chevron circle left'/>
+      </Button>} */}
 
       { props.currentQuestion === 5 ? 
         <Button 
@@ -19,13 +17,15 @@ const CheckInFooter = (props) => {
             props.handleSaveResponse();
             props.handleSubmit();
           }} >Submit</Button>
-      : <Button icon className={props.selectedResponse ? '' : 'disabled'}>
-        <Icon 
-          name='chevron circle right' 
+      : <Button 
+          icon className={props.selectedResponse ? '' : 'disabled'}
           onClick={() => {
             props.incrementQuestionCount(); 
             props.handleSaveResponse() 
-          }}/>
+          }}>
+        <Icon 
+          name='chevron circle right' 
+          />
       </Button> 
       }
     </div>
