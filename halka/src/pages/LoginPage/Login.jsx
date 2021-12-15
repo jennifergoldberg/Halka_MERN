@@ -34,7 +34,9 @@ function Login() {
     // }
   }
 
-  const LoginForm = (
+  return (
+    <>
+    <LandingFrame />
     <div id='login'>
       <h2 className='login__header'>Create your account</h2>
       <Form className='login__form' onSubmit={handleSubmit}>
@@ -52,10 +54,7 @@ function Login() {
           New to us? <Link to="/signup">Sign Up</Link>
       </section>
     </div>
-  )
-
-  return (
-    <LandingFrame {...LoginForm} />
+    </>
   )
 }
 

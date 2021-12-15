@@ -10,7 +10,6 @@ import './App.css'
 function App() {
   return (
     <div className='App'>
-      <h1>Halka</h1>
       <Routes>
         <Route path='/' element={<Landing /> } />
         <Route path='/start' element={<Start /> } />
