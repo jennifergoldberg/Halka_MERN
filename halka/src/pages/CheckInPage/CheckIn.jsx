@@ -23,7 +23,7 @@ function CheckIn() {
   }
 
   const handleResultsClick = (props) => {
-    
+
   }
 
   const handleSubmit = (array) => {
@@ -33,7 +33,7 @@ function CheckIn() {
 
   
   return (
-  <Card style={{margin:"auto"}}>
+  <Card style={{margin:"auto", marginTop:"100px"}}>
     <QuestionHeader currentQuestion = {currentQuestion} nextQuestion = {handleQuestionCountUp}/>
     <Questions currentCheckInQuestion = {currentCheckInQuestion}/>
     <Responses />
