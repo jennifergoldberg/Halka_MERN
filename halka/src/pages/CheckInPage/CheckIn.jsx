@@ -33,7 +33,7 @@ function CheckIn() {
 
   
   return (
-  <Card style={{margin:"auto", marginTop:"100px"}}>
+  <Card style={{margin:"auto"}}>
     <QuestionHeader currentQuestion = {currentQuestion} nextQuestion = {handleQuestionCountUp}/>
     <Questions currentCheckInQuestion = {currentCheckInQuestion}/>
     <Responses />
