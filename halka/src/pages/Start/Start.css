@@ -1,0 +1,30 @@
+#start {
+  text-align: center;
+}
+
+#start__hero {
+  height: 40%;
+  max-height: 450px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#start__hero img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.start__header {
+  margin: 35px 0 15px 0;
+}
+
+.start__intro {
+  font-size: 1.2rem;
+  margin: auto;
+  margin-bottom: 10px;
+  max-width: 70vw;
+}
+
+.start__beginCheckin {
+  display: inline-block !important;
+}
